@@ -1,0 +1,19 @@
+ Performance counter stats for 'python3 -u diffusion_python_memory_alloc_fix.py':
+
+ 2,63,99,98,97,916      cycles                    #    3.089 GHz
+11,10,34,02,97,211      instructions              #    4.21  insn per cycle
+      14,69,17,272      cache-references          #    1.719 M/sec
+       3,65,95,780      cache-misses              #   24.909 % of all cache refs
+ 2,24,65,83,06,463      branches                  #    2.629 G/sec
+         99,74,834      branch-misses             #    0.00% of all branches
+         85,467.92 msec task-clock                #    1.000 CPUs utilized
+            18,818      faults                    #  220.176 /sec
+            18,818      minor-faults              #  220.176 /sec
+                50      migrations                #    0.585 /sec
+
+      85.501455148 seconds time elapsed
+
+      85.435809000 seconds user
+       0.033499000 seconds sys
+
+

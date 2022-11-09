@@ -1,0 +1,29 @@
+Wrote profile results to diffusion_python.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 107.003 s
+File: diffusion_python.py
+Function: evolve at line 13
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    13                                           @profile
+    14                                           def evolve(grid, dt, D=1.0):
+    15       100        183.0      1.8      0.0      xmax, ymax = grid_shape
+    16       100     139113.0   1391.1      0.1      new_grid = [[0.0] * ymax for x in range(xmax)]
+    17                                           
+    18     64100      27337.0      0.4      0.0      for i in range(xmax):
+    19  41024000   16351681.0      0.4     15.3          for j in range(ymax):
+    20  40960000   15453060.0      0.4     14.4              try:
+    21                                           
+    22                                                           # ic(grid)
+    23  40960000   26433516.0      0.6     24.7                  grid_xx = (grid[(i + 1) % xmax][j] + grid[(i - 1) % xmax][j] - 2.0 * grid[i][j])
+    24  40960000   26782400.0      0.7     25.0                  grid_yy = (grid[i][(j + 1) % ymax] + grid[i][(j - 1) % ymax] - 2.0 * grid[i][j])
+    25  40960000   21815985.0      0.5     20.4                  new_grid[i][j] = grid[i][j] + D * (grid_xx + grid_yy) * dt
+    26                                                       except Exception as err:
+    27                                                           print(traceback.format_exc())
+    28                                                           # ic((i + 1) % xmax)
+    29                                                           # ic(grid)
+    30                                                           return
+    31       100         83.0      0.8      0.0      return new_grid
+

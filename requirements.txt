@@ -1,0 +1,3 @@
+icecream
+line_profiler
+numpy

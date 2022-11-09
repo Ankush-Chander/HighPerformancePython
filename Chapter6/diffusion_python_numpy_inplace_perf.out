@@ -1,0 +1,18 @@
+Performance counter stats for 'python3 -u diffusion_python_numpy_inplace.py':
+
+    4,48,54,66,630      cycles                    #    2.511 GHz
+    2,99,41,92,349      instructions              #    0.67  insn per cycle
+      49,61,18,459      cache-references          #  277.746 M/sec
+      10,66,33,831      cache-misses              #   21.494 % of all cache refs
+      48,80,85,483      branches                  #  273.248 M/sec
+         26,12,951      branch-misses             #    0.54% of all branches
+          1,786.23 msec task-clock                #    1.170 CPUs utilized
+            10,146      faults                    #    5.680 K/sec
+            10,143      minor-faults              #    5.678 K/sec
+                 2      migrations                #    1.120 /sec
+
+       1.526060733 seconds time elapsed
+
+       1.568621000 seconds user
+       0.218846000 seconds sys
+

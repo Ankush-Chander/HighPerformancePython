@@ -1,0 +1,23 @@
+Wrote profile results to diffusion_python_numpy.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 1.81902 s
+File: diffusion_python_numpy.py
+Function: laplacian at line 7
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     7                                           @profile
+     8                                           def laplacian(grid):
+     9       500    1819017.0   3638.0    100.0      return roll(grid, +1, 0) + roll(grid, -1, 0) + roll(grid, +1, 1) + roll(grid, -1, 1) - 4 * grid
+
+Total time: 2.01168 s
+File: diffusion_python_numpy.py
+Function: evolve at line 11
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    11                                           @profile
+    12                                           def evolve(grid, dt, D=1):
+    13       500    2011677.0   4023.4    100.0      return grid + dt * D * laplacian(grid)
+
